@@ -30,3 +30,4 @@ C:\Users\Computador\source\repos\dotNetProject\dotNetProject\obj\Debug\netcoreap
 C:\Users\Computador\source\repos\dotNetProject\dotNetProject\obj\Debug\netcoreapp2.1\dotNetProject.dll
 C:\Users\Computador\source\repos\dotNetProject\dotNetProject\obj\Debug\netcoreapp2.1\dotNetProject.pdb
 C:\Users\Computador\source\repos\dotNetProject\dotNetProject\obj\Debug\netcoreapp2.1\dotNetProject.csproj.CopyComplete
+C:\Users\Computador\source\repos\dotNetProject\dotNetProject\obj\Debug\netcoreapp2.1\Razor\Views\Departments\Index.g.cshtml.cs
