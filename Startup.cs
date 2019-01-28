@@ -12,6 +12,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using dotNetProject.Models;
 using dotNetProject.Data;
+using dotNetProject.Services;
 
 namespace dotNetProject
 {
@@ -41,6 +42,7 @@ namespace dotNetProject
                     options.UseMySql(Configuration.GetConnectionString("dotNetProjectContext"), builder => builder.MigrationsAssembly("dotNetProject")));
 
             services.AddScoped<SeedingService>();
+            services.AddScoped<SellerService>();
 
         }
 
