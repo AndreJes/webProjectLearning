@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using dotNetProject.Models;
 using Microsoft.EntityFrameworkCore;
+using dotNetProject.Services.Exceptions;
 
 namespace dotNetProject.Services
 {
@@ -37,6 +38,23 @@ namespace dotNetProject.Services
             var obj = _context.Sellers.Find(id);
             _context.Sellers.Remove(obj);
             _context.SaveChanges();
+        }
+
+        public void Update(Seller obj)
+        {
+            if (!_context.Sellers.Any(x => x.Id == obj.Id))
+            {
+                throw new NotFoundException("ID not found");
+            }
+            try
+            {
+                _context.Update(obj);
+                _context.SaveChanges();
+            }
+            catch(DbUpdateConcurrencyException e)
+            {
+                throw new DbConcurrencyException("An exception occured: " + e.Message);
+            }
         }
     }
 }
