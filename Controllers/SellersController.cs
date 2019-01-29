@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using dotNetProject.Services;
+using dotNetProject.Models;
 
 namespace dotNetProject.Controllers
 {
@@ -21,6 +22,19 @@ namespace dotNetProject.Controllers
             var list = _sellerService.FindAll();
 
             return View(list);
+        }
+
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Create(Seller seller)
+        {
+            _sellerService.Insert(seller);
+            return RedirectToAction(nameof(Index));
         }
     }
 }
