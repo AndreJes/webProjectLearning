@@ -37,3 +37,4 @@ C:\Users\Computador\source\repos\dotNetProject\dotNetProject\obj\Debug\netcoreap
 C:\Users\Computador\source\repos\dotNetProject\dotNetProject\obj\Debug\netcoreapp2.1\Razor\Views\Departments\Index.g.cshtml.cs
 C:\Users\Computador\source\repos\dotNetProject\dotNetProject\obj\Debug\netcoreapp2.1\Razor\Views\Sellers\Index.g.cshtml.cs
 C:\Users\Computador\source\repos\dotNetProject\dotNetProject\obj\Debug\netcoreapp2.1\Razor\Views\Sellers\Create.g.cshtml.cs
+C:\Users\Computador\source\repos\dotNetProject\dotNetProject\obj\Debug\netcoreapp2.1\Razor\Views\Sellers\Delete.g.cshtml.cs
