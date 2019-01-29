@@ -5,15 +5,18 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using dotNetProject.Services;
 using dotNetProject.Models;
+using dotNetProject.Models.ViewModels;
 
 namespace dotNetProject.Controllers
 {
     public class SellersController : Controller
     {
         private readonly SellerService _sellerService;
+        private readonly DepartmentService _departmentService;
 
-        public SellersController(SellerService sellersService)
+        public SellersController(SellerService sellersService, DepartmentService departmentService)
         {
+            _departmentService = departmentService;
             _sellerService = sellersService;
         }
 
@@ -26,7 +29,9 @@ namespace dotNetProject.Controllers
 
         public IActionResult Create()
         {
-            return View();
+            var departments = _departmentService.FindAll();
+            var viewModel = new SellerFormViewModel { Departments = departments };
+            return View(viewModel);
         }
 
         [HttpPost]
